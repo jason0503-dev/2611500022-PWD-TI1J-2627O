@@ -32,3 +32,9 @@
      aplikasi pada sisi peladen?
 
      Karena JavaScript dapat dijalankan langsung di sisi pengguna di browser, tanpa harus diproses oleh server
+
+  5. Mengapa pemahaman mengenai konsep web diperlukan sebelum mempelajari implementasi
+     HTML, CSS, JavaScript, PHP, dan MySQL?
+
+     Karena pemahaman mengenai konsep web diperlukan agar kita mengetahui bagaimana sebuah website bekerja, mulai dari browser,server, database, hingga proses pertukaran data. itu membuat kita memahami fungsi dan dasar untuk mempelajari teknologi dan pemrograman web.
+     
