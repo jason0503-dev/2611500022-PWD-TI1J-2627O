@@ -20,6 +20,9 @@
 
     2.Situs Web (Website) adalah kumpulan beberapa halaman web yang saling terhubung dan berada dalam satu alamat/domain.
 
-    3.Aplikasi Web (Web Application) adalah website yang memiliki fitur interaktif dan memungkinkan pengguna melakukan  suatu aktivitas, seperti login, mengisi formulir, mengunggah file, atau melakukan transaksi.
+    3.Aplikasi Web (Web Application) adalah website yang memiliki fitur interaktif dan membuat pengguna bisa melakukan   aktivitas, seperti login, mengisi formulir, mengunggah file, atau melakukan transaksi.
 
 3. Apa perbedaan umum antara web statis dan aplikasi web dinamis?
+     1.Web statis adalah website yang isi dan tampilannya tetap serta tidak banyak berubah.
+
+     2.Aplikasi web dinamis adalah website yang isinya dapat berubah sesuai data, pengguna, atau interaksi.
