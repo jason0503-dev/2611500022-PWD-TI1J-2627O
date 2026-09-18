@@ -15,3 +15,6 @@
      Proses membuat, mengembangkan, dan mengelola website atau aplikasi berbasis web menggunakan bahasa pemrograman   seperti       HTML, CSS, JavaScript, PHP, dan lainnya.
 
  2. Apa perbedaan antara halaman web, situs web, dan aplikasi web?
+    1.Halaman Web (Web Page) adalah satu halaman atau dokumen yang dapat diakses melalui internet.
+    2.Situs Web (Website) adalah kumpulan beberapa halaman web yang saling terhubung dan berada dalam satu alamat/domain.
+    3.Aplikasi Web (Web Application) adalah website yang memiliki fitur interaktif dan memungkinkan pengguna melakukan suatu   aktivitas, seperti login, mengisi formulir, mengunggah file, atau melakukan transaksi.
