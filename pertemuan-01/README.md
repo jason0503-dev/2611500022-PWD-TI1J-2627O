@@ -27,3 +27,6 @@
      1.Web statis adalah website yang isi dan tampilannya tetap serta tidak banyak berubah.
 
      2.Aplikasi web dinamis adalah website yang isinya dapat berubah sesuai data, pengguna, atau interaksi.
+
+  4. Mengapa halaman yang menggunakan JavaScript tidak selalu berarti menggunakan pemrosesan
+     aplikasi pada sisi peladen? 
