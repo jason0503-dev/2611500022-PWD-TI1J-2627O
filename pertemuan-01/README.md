@@ -29,4 +29,6 @@
      2.Aplikasi web dinamis adalah website yang isinya dapat berubah sesuai data, pengguna, atau interaksi.
 
   4. Mengapa halaman yang menggunakan JavaScript tidak selalu berarti menggunakan pemrosesan
-     aplikasi pada sisi peladen? 
+     aplikasi pada sisi peladen?
+
+     Karena JavaScript dapat dijalankan langsung di sisi pengguna di browser, tanpa harus diproses oleh server
