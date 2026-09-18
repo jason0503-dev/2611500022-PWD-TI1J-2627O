@@ -10,3 +10,5 @@
 
 # Checkpoint - Konsep Dasar Web
   Jawablah dengan redaksi Anda sendiri:
+1. Apa yang dimaksud dengan pemrograman web?
+   Jawaban:proses membuat, mengembangkan, dan mengelola website atau aplikasi berbasis web menggunakan bahasa pemrograman seperti HTML, CSS, JavaScript, PHP, dan lainnya
