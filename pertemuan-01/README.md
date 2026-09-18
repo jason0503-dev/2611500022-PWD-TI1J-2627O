@@ -12,6 +12,6 @@
   Jawablah dengan redaksi Anda sendiri:
 1. Apa yang dimaksud dengan pemrograman web?
  
- Proses membuat, mengembangkan, dan mengelola website atau aplikasi berbasis web menggunakan bahasa pemrograman   seperti HTML, CSS, JavaScript, PHP, dan lainnya.
+     Proses membuat, mengembangkan, dan mengelola website atau aplikasi berbasis web menggunakan bahasa pemrograman   seperti       HTML, CSS, JavaScript, PHP, dan lainnya.
 
  2. Apa perbedaan antara halaman web, situs web, dan aplikasi web?
