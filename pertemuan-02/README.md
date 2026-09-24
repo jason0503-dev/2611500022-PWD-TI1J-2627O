@@ -16,3 +16,5 @@ elemen semantik, teks, daftar, tautan, dan gambar.
 - Galat yang ditemukan: [tuliskan jika ada]
 - Perbaikan yang dilakukan: [tuliskan]
 - Hasil validasi akhir: [tuliskan hasil]
+## GitHub Pages
+URL: [https://jason0503-dev.github.io/2611500022-PWD-TI1J-26270/pertemuan-02/]
