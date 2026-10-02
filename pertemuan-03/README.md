@@ -17,14 +17,14 @@
 
 
 ## CSS Dasar
-- Selector elemen: [tuliskan]
-- Selector class: [tuliskan]
-- Selector ID: [tuliskan]
-- Properti CSS dasar yang digunakan: [tuliskan]
+- Selector elemen: <h2>,<h3>,<p>,<ol>,<label>,<button>
+- Selector class: .form-group, .input-form
+- Selector ID: #about, #contact
+- Properti CSS dasar yang digunakan: background-color, color, border, padding, margin,   font-family, font-size, font-weight, dan border-bottom.
 
 
 ## Pengujian dan Perbaikan
-- Galat yang ditemukan: [tuliskan jika ada]
-- Penyebab galat: [tuliskan]
-- Perbaikan yang dilakukan: [tuliskan]
-- Hasil pengujian ulang: [tuliskan]
+- Galat yang ditemukan: pengujian POST menghasilkan eror 405 Not Allowed
+- Penyebab galat: GitHub pages tidak mendukung proses POST pada halaman HTML  statis
+- Perbaikan yang dilakukan: Mengubah ke GET agar sesuai form
+- Hasil pengujian ulang: Metode GET berhasil dan data form tampil pada URL browser
