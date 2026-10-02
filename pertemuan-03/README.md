@@ -30,3 +30,7 @@
 - Penyebab galat: GitHub Pages tidak mendukung proses POST pada halaman HTML statis.
 - Perbaikan yang dilakukan: Mengubah metode form menjadi GET.
 - Hasil pengujian ulang: Metode GET berhasil dan data form tampil pada URL browser.
+
+## GitHub Pages
+
+URL: https://jason0503-dev.github.io/2611500022-PWD-TI1J-2627O/pertemuan-03/
