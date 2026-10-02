@@ -4,10 +4,14 @@
 - Menyalin `index.html` dan `img/foto-profil.jpg` ke `pertemuan-03/`.
 
 
+
+
 ## Implementasi Formulir
 - Elemen form yang digunakan: <form>, <label>, <input>, <select>,<option>,<button>,<textarea
 - Tipe input yang digunakan: <text>,<email>,<number>,<date>,<radio>,<checkbox>
 - Atribut validasi yang digunakan: <required>, <minlength>, <maxlength>,<min>,<max>
+
+
 
 
 ## Pengujian GET dan POST
@@ -16,11 +20,15 @@
 - Hasil pengujian POST: saat tekan tombol kirim hasilnya (status 405 Not Allowed)
 
 
+
+
 ## CSS Dasar
 - Selector elemen: <h2>,<h3>,<p>,<ol>,<label>,<button>
 - Selector class: .form-group, .input-form
 - Selector ID: #about, #contact
 - Properti CSS dasar yang digunakan: background-color, color, border, padding, margin,   font-family, font-size, font-weight, dan border-bottom.
+
+
 
 
 ## Pengujian dan Perbaikan
