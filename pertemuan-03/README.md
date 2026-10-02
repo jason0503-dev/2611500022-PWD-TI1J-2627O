@@ -11,9 +11,9 @@
 
 
 ## Pengujian GET dan POST
-- Hasil pengujian GET: [tuliskan]
-- Contoh URL encoding yang ditemukan: 
-- Hasil pengujian POST: [tuliskan]
+- Hasil pengujian GET: Data form berhasil tampil di URl browser setelah tombol kirim ditekan
+- Contoh URL encoding yang ditemukan: %40 untuk @ (alamat email)
+- Hasil pengujian POST: saat tekan tombol kirim hasilnya (status 405 Not Allowed)
 
 
 ## CSS Dasar
