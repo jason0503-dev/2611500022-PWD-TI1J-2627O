@@ -98,6 +98,7 @@ section {
     padding: 20px;
     margin: 0;
     font-family: Arial, sans-serif;
+    grid-column: 1 / -1;
 }
 
 #contact h2 {
@@ -173,4 +174,10 @@ nav a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
