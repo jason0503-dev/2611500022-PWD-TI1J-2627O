@@ -187,8 +187,8 @@ main {
         align-items: center;
         gap: 16px;
     }
-}
 
-#contact {
-    grid-column: 1 / -1;
+    #contact {
+        grid-column: 1 / -1;
+    }
 }
