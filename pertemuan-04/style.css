@@ -28,7 +28,6 @@ section {
     width: 100%;
 }
 
-
 #home {
     background-color: #ffffff;
     border: 1px solid #d0d7de;
@@ -168,6 +167,12 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 main {
