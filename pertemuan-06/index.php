@@ -1,12 +1,7 @@
 <?php
-// Komentar satu baris.
-echo "Keluaran menggunakan echo.";
-/*
-Komentar beberapa baris.
-Komentar ini tidak ditampilkan pada halaman.
-*/
-?>
+print "Keluaran menggunakan print.";
 
+?>
 
 <!doctype html>
 <html lang="id">
