@@ -1,6 +1,6 @@
+<p>Konten HTML statis.</p>
 <?php
-print "Keluaran menggunakan print.";
-
+echo "<p>Konten yang dihasilkan oleh PHP.</p>";
 ?>
 
 <!doctype html>
