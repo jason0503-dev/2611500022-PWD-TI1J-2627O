@@ -26,6 +26,8 @@ $keteranganSemester = "Semester menengah";
 } else {
 $keteranganSemester = "Semester akhir";
 }
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik
+Informatika" : "Lainnya");
 ?>
 
 <!doctype html>
@@ -80,20 +82,23 @@ $keteranganSemester = "Semester akhir";
             <article>
                 <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
                 <h3>Profil Singkat</h3>
+                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
+                <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
+                <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
+                <p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
 
                 <p>
                     Saya mahasiswa Program Studi Teknik Informatika.
                 </p>
 
                 <h3>Target Belajar</h3>
-                <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
-                <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
                 <ol>
                     <li>Memahami struktur HTML5.</li>
                     <li>Menyusun halaman web semantik.</li>
                     <li>Memvalidasi dokumen HTML.</li>
                 </ol>
             </article>
+            
         </section>
 
         <section id="contact">
