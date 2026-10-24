@@ -241,7 +241,7 @@ $nomorSemester++; // operator penugasan
     </main>
 
     <footer>
-        <p>&copy; 2026 Jason Frans Wijaya [2611500022]</p>
+   <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
     </footer>
 
     <script src="script.js"></script>
