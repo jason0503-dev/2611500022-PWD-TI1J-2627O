@@ -16,6 +16,8 @@ const PROFIL_GITHUB = "satpamal";
 // Bagian 2: Operator
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
+$semesterValid = $semester >= 1 && $semester <= $batasSemester;
+$statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa";
 ?>
 
 <!doctype html>
@@ -76,7 +78,7 @@ $sisaSemester = $batasSemester - $semester;
 
                 <h3>Target Belajar</h3>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
-
+                <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
                 <ol>
                     <li>Memahami struktur HTML5.</li>
                     <li>Menyusun halaman web semantik.</li>
