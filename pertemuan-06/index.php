@@ -52,6 +52,10 @@ const PROFIL_GITHUB = "satpamal";
                 Halo, saya Jason Frans Wijaya.
                 Saya sedang mempelajari Pemrograman Web Dasar.
             </p>
+            <p>Halo, saya <strong><?php echo $namaMahasiswa; ?></strong>. Saya sedang mempelajari matakuliah
+<strong><?php print NAMA_MATA_KULIAH; ?></strong> pada tahun akademik <?php echo $tahunAkademik;
+?>.</p>
+
 
             <img src="img/foto-profil.png" alt="Foto profil Nama Mahasiswa" width="200">
         </section>
