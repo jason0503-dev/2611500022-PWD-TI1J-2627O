@@ -28,6 +28,17 @@ $keteranganSemester = "Semester akhir";
 }
 $namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik
 Informatika" : "Lainnya");
+// Bagian 4: Percabangan switch-case-default
+switch ($programStudi) {
+case "SI":
+    $fokusProgramStudi = "Sistem informasi dan proses bisnis";
+break;
+case "TI":
+$fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
+break;
+default:
+$fokusProgramStudi = "Belum ditentukan";
+}
 ?>
 
 <!doctype html>
@@ -86,7 +97,7 @@ Informatika" : "Lainnya");
                 <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
                 <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
                 <p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
-
+<p>Fokus program studi: <?php echo $fokusProgramStudi; ?></p>
                 <p>
                     Saya mahasiswa Program Studi Teknik Informatika.
                 </p>
