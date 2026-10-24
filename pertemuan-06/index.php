@@ -147,13 +147,11 @@ $nomorSemester++; // operator penugasan
 
         <section id="contact">
             <h2>Kontak</h2>
+          <p>
+         Kunjungi
+        <a href="https://github.com/jason0503-dev" target="_blank">Profil GitHub</a>
+       </p>
 
-            <p>
-                Kunjungi
-                <a href="https://github.com/jason0503-dev">
-                    profil GitHub saya
-                </a>.
-            </p>
 
             <form id="contactForm" action="index.html" method="get" novalidate>
                 <div class="form-group">
