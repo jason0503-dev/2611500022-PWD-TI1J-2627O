@@ -73,7 +73,7 @@ $fokusProgramStudi = "Belum ditentukan";
     <main>
 
         <section id="home">
-            <h2>Selamat Datang</h2>
+            <h2>Profil Mahasiswa</h2>
 
             <p>
                 Halo, saya Jason Frans Wijaya.

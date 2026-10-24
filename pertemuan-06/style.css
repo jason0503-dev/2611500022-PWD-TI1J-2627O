@@ -211,7 +211,7 @@ footer p {
     color: #2e7d32;
 }
 
-@media (min-width: 1980px) {
+@media (min-width: 768px) {
     nav {
         margin-top: 16px;
     }
@@ -224,7 +224,7 @@ footer p {
     }
 
     main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     #contact {
