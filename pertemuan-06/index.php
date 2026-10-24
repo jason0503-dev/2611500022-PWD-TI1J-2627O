@@ -2,7 +2,6 @@
 <?php
 echo "<p>Konten yang dihasilkan oleh PHP.</p>";
 ?>
-
 <!doctype html>
 <html lang="id">
 
