@@ -12,6 +12,10 @@ $catatanTambahan = null;
 
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
 const PROFIL_GITHUB = "satpamal";
+
+// Bagian 2: Operator
+$batasSemester = 8;
+$sisaSemester = $batasSemester - $semester;
 ?>
 
 <!doctype html>
@@ -71,6 +75,7 @@ const PROFIL_GITHUB = "satpamal";
                 </p>
 
                 <h3>Target Belajar</h3>
+                <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
 
                 <ol>
                     <li>Memahami struktur HTML5.</li>
