@@ -1,6 +1,5 @@
 <?php
-// P6: PHP dasar dan pemrograman sisi peladen
-// Bagian 1: Variabel dan konstanta
+//P7
 $nim = "2611500022";
 $namaMahasiswa = "Jason Frans Wijaya";
 $programStudi = "TI";
@@ -11,7 +10,7 @@ $statusAktif = true;
 $catatanTambahan = null;
 
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
-const PROFIL_GITHUB = "satpamal";
+const PROFIL_GITHUB = "jason0503-dev";
 
 // Bagian 2: Operator
 $batasSemester = 8;
