@@ -1,4 +1,5 @@
 <?php
+session_start();
 // P7
 $nim = "2611500022";
 $namaMahasiswa = "Jason Frans Wijaya";
@@ -12,18 +13,80 @@ $catatanTambahan = null;
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
 const PROFIL_GITHUB = "jason0503-dev";
 // P7: penggunaan POST
-if (isset($_POST['nama'])) {
-$nama = $_POST['nama'];
-$email = $_POST['email'] ?? '';
-$semesterForm = $_POST['semester'] ?? '';
-$tanggal = $_POST['tanggal'] ?? '';
-$jenisPesan = $_POST['jenis_pesan'] ?? '';
-$prodi = $_POST['prodi'] ?? '';
-$pesan = $_POST['pesan'] ?? '';
+$nama = trim((string) ($_POST['nama'] ?? ''));
+$email = trim((string) ($_POST['email'] ?? ''));
+$semesterForm = trim((string) ($_POST['semester'] ?? ''));
+$jenisPesan = trim((string) ($_POST['jenis_pesan'] ?? ''));
+$prodi = trim((string) ($_POST['prodi'] ?? ''));
+$pesan = trim((string) ($_POST['pesan'] ?? ''));
+$tanggal = trim((string) ($_POST['tanggal'] ?? ''));
 $minat = $_POST['minat'] ?? [];
-echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
-} 
 
+$pesanKesalahan = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    // Validasi semester
+    if (trim($semesterForm) !== '') {
+        $semesterValid = filter_var($semesterForm, FILTER_VALIDATE_INT);
+
+        if (
+            $semesterValid === false ||
+            $semesterValid < 1 ||
+            $semesterValid > 14
+        ) {
+            $pesanKesalahan .= 'Semester harus berupa bilangan bulat antara 1 dan 14. ';
+        }
+    }
+
+    // Validasi pilihan
+
+    $minatDiizinkan = ['HTML', 'CSS'];
+
+    if (!is_array($minat)) {
+        $pesanKesalahan .= 'Format pilihan topik tidak valid. ';
+    } else {
+        foreach ($minat as $topik) {
+            if (!in_array($topik, $minatDiizinkan, true)) {
+                $pesanKesalahan .= 'Pilihan topik tidak valid. ';
+                break;
+            }
+        }
+    }
+
+    // Validasi email
+    if (trim($email) !== '') {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            $pesanKesalahan .= 'Format email tidak valid. ';
+        }
+    }
+
+    // Validasi field wajib
+    if ($nama === '') {
+        $pesanKesalahan .= 'Nama lengkap wajib diisi. ';
+    }
+    if ($email === '') {
+        $pesanKesalahan .= 'Email wajib diisi. ';
+    }
+    if ($semesterForm === '') {
+        $pesanKesalahan .= 'Semester wajib diisi. ';
+    }
+    if ($tanggal === '') {
+        $pesanKesalahan .= 'Tanggal kunjungan wajib diisi. ';
+    }
+    if ($jenisPesan === '') {
+        $pesanKesalahan .= 'Jenis pesan wajib dipilih. ';
+    }
+    if ($prodi === '') {
+        $pesanKesalahan .= 'Program studi wajib dipilih. ';
+    }
+    if ($pesan === '') {
+        $pesanKesalahan .= 'Pesan wajib diisi. ';
+    }
+    if (empty($minat)) {
+        $pesanKesalahan .= 'Minat wajib dipilih minimal satu. ';
+    }
+}
 // Bagian 2: Operator
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
@@ -158,6 +221,11 @@ $nomorSemester++; // operator penugasan
 
         <section id="contact">
             <h2>Kontak</h2>
+            <?php if ($pesanKesalahan !== ''): ?>
+            <p class="form-feedback-error">
+            <?= htmlspecialchars($pesanKesalahan, ENT_QUOTES, 'UTF-8') ?>
+            </p>
+            <?php endif; ?>
           <p>
          Kunjungi
         <a href="https://github.com/jason0503-dev" target="_blank">Profil GitHub</a>
