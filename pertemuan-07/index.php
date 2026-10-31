@@ -1,5 +1,5 @@
 <?php
-// P7: penggunaan GET
+// P7
 $nim = "2611500022";
 $namaMahasiswa = "Jason Frans Wijaya";
 $programStudi = "TI";
