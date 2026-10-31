@@ -153,7 +153,7 @@ $nomorSemester++; // operator penugasan
        </p>
 
 
-            <form id="contactForm" action="index.php" method="get" novalidate>
+            <form id="contactForm" action="index.html" method="get" novalidate>
                 <div class="form-group">
                     <label for="nama">Nama Lengkap</label>
                     <br />
