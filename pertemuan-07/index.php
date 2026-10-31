@@ -1,5 +1,5 @@
 <?php
-//P7
+// P7: penggunaan GET
 $nim = "2611500022";
 $namaMahasiswa = "Jason Frans Wijaya";
 $programStudi = "TI";
@@ -11,6 +11,11 @@ $catatanTambahan = null;
 
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
 const PROFIL_GITHUB = "jason0503-dev";
+// P7: penggunaan GET
+if (isset($_GET['nama'])) {
+$nama = $_GET['nama'];
+echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
+} 
 
 // Bagian 2: Operator
 $batasSemester = 8;
@@ -152,7 +157,7 @@ $nomorSemester++; // operator penugasan
        </p>
 
 
-            <form id="contactForm" action="index.html" method="get" novalidate>
+            <form id="contactForm" action="index.php" method="get" novalidate>
                 <div class="form-group">
                     <label for="nama">Nama Lengkap</label>
                     <br />
