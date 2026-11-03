@@ -12,12 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["nama"])) {
 	$prodi = trim((string) ($_POST["prodi"] ?? ""));
 	$pesan = trim((string) ($_POST["pesan"] ?? ""));
 
-	// Checkbox dapat mengirimkan lebih dari satu nilai.
 	if (!is_array($minat)) {
 		$minat = [];
 	}
 
-	// Menyimpan setiap nilai formulir ke dalam session secara terpisah.
 	$_SESSION["nama"] = $nama;
 	$_SESSION["email"] = $email;
 	$_SESSION["semester"] = $semesterForm;
@@ -27,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["nama"])) {
 	$_SESSION["prodi"] = $prodi;
 	$_SESSION["pesan"] = $pesan;
 
-	// PRG: mencegah pengiriman POST berulang ketika halaman dimuat ulang.
+	
 	header("Location: index.php#contact");
 	exit;
 }
@@ -36,7 +34,6 @@ if (
     $_SERVER['REQUEST_METHOD'] === 'POST' &&
     isset($_POST['nama_penanggung_jawab'])
 ) {
-    // Normalisasi masukan
     $nama = trim($_POST['nama_penanggung_jawab'] ?? '');
     $fasilitas = trim($_POST['jenis_fasilitas'] ?? '');
     $tanggal = trim($_POST['tanggal_peminjaman'] ?? '');
@@ -46,7 +43,7 @@ if (
     );
     $keperluan = trim($_POST['keperluan_peminjaman'] ?? '');
 
-    // Pilihan fasilitas yang diperbolehkan
+
     $daftarFasilitas = [
         'Ruang Kelas',
         'Aula',
@@ -82,7 +79,7 @@ if (
         $errors[] = 'Keperluan peminjaman wajib diisi.';
     }
 
-    // Simpan hasil ke session
+    
     if (empty($errors)) {
         $_SESSION['hasil_peminjaman'] = [
             'status' => 'berhasil',
@@ -99,16 +96,16 @@ if (
         ];
     }
 
-    // Post-Redirect-Get (PRG)
+  
     header('Location: index.php#peminjaman');
     exit;
 }
 
-// Ambil hasil dari session setelah redirect
+
 $hasilPeminjaman = $_SESSION['hasil_peminjaman'] ?? null;
 unset($_SESSION['hasil_peminjaman']);
 
-// Mengamankan data sebelum ditampilkan kembali ke halaman HTML.
+
 // P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
 $nim = "2611500022";
@@ -243,13 +240,13 @@ switch ($programStudi) {
 					$nomorSemester = 1;
 					while ($nomorSemester <= 3) {
 						echo "<li>Semester " . $nomorSemester . "</li>";
-						$nomorSemester++; // operator penugasan
+						$nomorSemester++; 
 					}
 					?>
 				</ol>
 			</article>
 		</section>
-<!-- P8: Formulir Permohonan Peminjaman Fasilitas Kampus -->
+P8: Formulir Permohonan Peminjaman Fasilitas Kampus 
 <section id="peminjaman">
     <h2>Permohonan Peminjaman Fasilitas Kampus</h2>
 
