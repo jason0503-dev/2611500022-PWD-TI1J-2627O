@@ -80,7 +80,7 @@ $ipk = 3.75;
 $statusAktif = true;
 $catatanTambahan = null;
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
-const PROFIL_GITHUB = "";
+const PROFIL_GITHUB = "jason0503-dev";
 
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
@@ -238,7 +238,7 @@ $_SESSION['pesanKesalahan']
 <?php endif; ?>
 <p>
 Kunjungi
-<a target="_blank" href="https://github.com/jason0503-dev/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
+<a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
 </p>
 <form id="contactForm" action="index.php" method="post" novalidate>
 <div class="form-group">
