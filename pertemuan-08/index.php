@@ -2,7 +2,7 @@
 session_start();
 
 // P7: Memproses data formulir dan menyimpannya ke dalam session.
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["nama"])) {
 	$nama = trim((string) ($_POST["nama"] ?? ""));
 	$email = trim((string) ($_POST["email"] ?? ""));
 	$semesterForm = trim((string) ($_POST["semester"] ?? ""));
@@ -31,6 +31,82 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	header("Location: index.php#contact");
 	exit;
 }
+// P8: Pemrosesan Formulir Peminjaman Fasilitas Kampus
+if (
+    $_SERVER['REQUEST_METHOD'] === 'POST' &&
+    isset($_POST['nama_penanggung_jawab'])
+) {
+    // Normalisasi masukan
+    $nama = trim($_POST['nama_penanggung_jawab'] ?? '');
+    $fasilitas = trim($_POST['jenis_fasilitas'] ?? '');
+    $tanggal = trim($_POST['tanggal_peminjaman'] ?? '');
+    $durasi = filter_var(
+        $_POST['durasi_peminjaman'] ?? '',
+        FILTER_VALIDATE_INT
+    );
+    $keperluan = trim($_POST['keperluan_peminjaman'] ?? '');
+
+    // Pilihan fasilitas yang diperbolehkan
+    $daftarFasilitas = [
+        'Ruang Kelas',
+        'Aula',
+        'Laboratorium Komputer',
+        'Proyektor'
+    ];
+
+    // Validasi PHP
+    $errors = [];
+
+    if ($nama === '') {
+        $errors[] = 'Nama penanggung jawab wajib diisi.';
+    }
+
+    if (!in_array($fasilitas, $daftarFasilitas, true)) {
+        $errors[] = 'Jenis fasilitas tidak valid.';
+    }
+
+    $tanggalValid = DateTime::createFromFormat('Y-m-d', $tanggal);
+
+    if (
+        !$tanggalValid ||
+        $tanggalValid->format('Y-m-d') !== $tanggal
+    ) {
+        $errors[] = 'Tanggal peminjaman tidak valid.';
+    }
+
+    if ($durasi === false || $durasi < 1) {
+        $errors[] = 'Durasi peminjaman minimal 1 jam.';
+    }
+
+    if ($keperluan === '') {
+        $errors[] = 'Keperluan peminjaman wajib diisi.';
+    }
+
+    // Simpan hasil ke session
+    if (empty($errors)) {
+        $_SESSION['hasil_peminjaman'] = [
+            'status' => 'berhasil',
+            'nama' => $nama,
+            'fasilitas' => $fasilitas,
+            'tanggal' => $tanggal,
+            'durasi' => $durasi,
+            'keperluan' => $keperluan
+        ];
+    } else {
+        $_SESSION['hasil_peminjaman'] = [
+            'status' => 'gagal',
+            'errors' => $errors
+        ];
+    }
+
+    // Post-Redirect-Get (PRG)
+    header('Location: index.php#peminjaman');
+    exit;
+}
+
+// Ambil hasil dari session setelah redirect
+$hasilPeminjaman = $_SESSION['hasil_peminjaman'] ?? null;
+unset($_SESSION['hasil_peminjaman']);
 
 // Mengamankan data sebelum ditampilkan kembali ke halaman HTML.
 // P6: PHP dasar dan pemrograman sisi peladen
@@ -227,6 +303,48 @@ switch ($programStudi) {
         <button type="reset">Batal</button>
 
     </form>
+	<?php if ($hasilPeminjaman !== null): ?>
+
+        <article class="submission-result">
+            <?php if ($hasilPeminjaman["status"] === "berhasil"): ?>
+
+                <h3>Permohonan Berhasil Diproses</h3>
+
+                <p><strong>Nama Penanggung Jawab:</strong>
+                    <?= htmlspecialchars($hasilPeminjaman["nama"], ENT_QUOTES, "UTF-8") ?>
+                </p>
+
+                <p><strong>Jenis Fasilitas:</strong>
+                    <?= htmlspecialchars($hasilPeminjaman["fasilitas"], ENT_QUOTES, "UTF-8") ?>
+                </p>
+
+                <p><strong>Tanggal Peminjaman:</strong>
+                    <?= htmlspecialchars($hasilPeminjaman["tanggal"], ENT_QUOTES, "UTF-8") ?>
+                </p>
+
+                <p><strong>Durasi Peminjaman:</strong>
+                    <?= htmlspecialchars((string) $hasilPeminjaman["durasi"], ENT_QUOTES, "UTF-8") ?> jam
+                </p>
+
+                <p><strong>Keperluan Peminjaman:</strong>
+                    <?= nl2br(htmlspecialchars($hasilPeminjaman["keperluan"], ENT_QUOTES, "UTF-8")) ?>
+                </p>
+
+            <?php else: ?>
+
+                <h3>Permohonan Gagal Diproses</h3>
+
+                <ul>
+                    <?php foreach ($hasilPeminjaman["errors"] as $error): ?>
+                        <li><?= htmlspecialchars($error, ENT_QUOTES, "UTF-8") ?></li>
+                    <?php endforeach; ?>
+                </ul>
+
+            <?php endif; ?>
+        </article>
+
+    <?php endif; ?>
+</section>
 		<section id="contact">
 			<h2>Kontak</h2>
 
