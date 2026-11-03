@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["nama"])) {
 	header("Location: index.php#contact");
 	exit;
 }
-// P8: Pemrosesan Formulir Peminjaman Fasilitas Kampus
+
 if (
     $_SERVER['REQUEST_METHOD'] === 'POST' &&
     isset($_POST['nama_penanggung_jawab'])
@@ -246,7 +246,7 @@ switch ($programStudi) {
 				</ol>
 			</article>
 		</section>
-P8: Formulir Permohonan Peminjaman Fasilitas Kampus 
+								
 <section id="peminjaman">
     <h2>Permohonan Peminjaman Fasilitas Kampus</h2>
 
