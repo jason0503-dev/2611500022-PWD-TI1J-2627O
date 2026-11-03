@@ -173,7 +173,60 @@ switch ($programStudi) {
 				</ol>
 			</article>
 		</section>
+<!-- P8: Formulir Permohonan Peminjaman Fasilitas Kampus -->
+<section id="peminjaman">
+    <h2>Permohonan Peminjaman Fasilitas Kampus</h2>
 
+    <form id="peminjamanForm" action="index.php" method="post">
+
+        <div class="form-group">
+            <label for="nama_penanggung_jawab">Nama Penanggung Jawab</label><br>
+            <input class="input-form" type="text"
+                id="nama_penanggung_jawab"
+                name="nama_penanggung_jawab"
+                placeholder="Masukkan nama penanggung jawab" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jenis_fasilitas">Jenis Fasilitas</label><br>
+            <select class="input-form" id="jenis_fasilitas"
+                name="jenis_fasilitas" required>
+                <option value="">-- Pilih Fasilitas --</option>
+                <option value="Ruang Kelas">Ruang Kelas</option>
+                <option value="Aula">Aula</option>
+                <option value="Laboratorium Komputer">Laboratorium Komputer</option>
+                <option value="Proyektor">Proyektor</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tanggal_peminjaman">Tanggal Peminjaman</label><br>
+            <input class="input-form" type="date"
+                id="tanggal_peminjaman"
+                name="tanggal_peminjaman" required>
+        </div>
+
+        <div class="form-group">
+            <label for="durasi_peminjaman">Durasi Peminjaman (Jam)</label><br>
+            <input class="input-form" type="number"
+                id="durasi_peminjaman"
+                name="durasi_peminjaman"
+                min="1"
+                placeholder="Masukkan durasi peminjaman" required>
+        </div>
+
+        <div class="form-group">
+            <label for="keperluan_peminjaman">Keperluan Peminjaman</label><br>
+            <textarea class="input-form"
+                id="keperluan_peminjaman"
+                name="keperluan_peminjaman"
+                placeholder="Jelaskan keperluan peminjaman" required></textarea>
+        </div>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+
+    </form>
 		<section id="contact">
 			<h2>Kontak</h2>
 
