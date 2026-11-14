@@ -4,3 +4,4 @@ pada pertemuan-09 saya melakukan:
 2. membuat fungsi `bersihkan()` untuk mengamankan output menggunakan `htmlspecialchars()` dengan `ENT_QUOTES` dan encoding UTF-8.
 3. menyimpan seluruh data formulir kontak ke dalam session `formData`, lalu menampilkan kembali data tersebut menggunakan perulangan.
 4. mencoba dan mengganti tampilan hasil formulir dengan perulangan foreach dan berhasil.
+5. mencoba untuk membuat huruf atau (FONT) menjadi tebal dan memberikan warna dan berhasil.
