@@ -5,5 +5,6 @@ pada pertemuan-09 saya melakukan:
 3. menyimpan seluruh data formulir kontak ke dalam session `formData`, lalu menampilkan kembali data tersebut menggunakan perulangan.
 4. mencoba dan mengganti tampilan hasil formulir dengan perulangan foreach dan berhasil.
 5. mencoba untuk membuat huruf atau (FONT) menjadi tebal dan memberikan warna dan berhasil.
-6.  membuat file "fungsi.php" dan  menyalin function bersihkan serta menyertakan  file "fungsi.php" ke "index.php" menggunakan include dan hasinya berfungsi.
+6. membuat file "fungsi.php" dan  menyalin function bersihkan serta menyertakan  file "fungsi.php" ke "index.php" menggunakan include dan hasinya berfungsi.
+7. mencoba memunculkan tuliskan kembali dengan disable echo <style>.
 
