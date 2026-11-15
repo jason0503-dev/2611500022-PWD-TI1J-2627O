@@ -7,4 +7,5 @@ pada pertemuan-09 saya melakukan:
 5. mencoba untuk membuat huruf atau (FONT) menjadi tebal dan memberikan warna dan berhasil.
 6. membuat file "fungsi.php" dan  menyalin function bersihkan serta menyertakan  file "fungsi.php" ke "index.php" menggunakan include dan hasinya berfungsi.
 7. mencoba memunculkan tuliskan kembali dengan disable echo <style>.
+8. membuat font tebal pada fomulir data yang dikirim dan memperbaiki eror isi pesan formulir yang tidak muncul dan berfungsi kembali.
 
