@@ -1,22 +1,19 @@
 <?php
 session_start();
 
-function bersihkan($teks)
-{	
-return htmlspecialchars($teks, ENT_QUOTES, "UTF-8");
-}
+include("fungsi.php");
 	
 echo "yihaww <b>lompat</b> tebing";
 echo bersihkan("yihaww <b>lompat</b> tebing");
 echo "<script>alert('yihaww');</script>";
 echo bersihkan("<script>alert('yihaww');</script>");
-echo "<style>
+ /* echo "<style>
 * {
     font-weight: bolder;
 	color: white;
-}</style>";
+}</style>"; */      
 
-$contohArray = ["vichi", "james", "jason", "tawe"];
+$contohArray = ["supri", "wonka", "dahsyat", "ucup"];
 echo $contohArray[1];
 
 // P7: Memproses data formulir dan menyimpannya ke dalam session.
@@ -62,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	header("Location: index.php#contact");
 	exit;
 }
-echo $_SESSION["formData"]["nama"];
+echo $_SESSION["formData"]["nama"] ?? "";
 
 // Mengamankan data sebelum ditampilkan kembali ke halaman HTML.
 // P6: PHP dasar dan pemrograman sisi peladen
@@ -307,20 +304,21 @@ switch ($programStudi) {
             "prodi"       => "Program Studi",
             "pesan"       => "Pesan"
         ];
-
+    
         foreach ($labels as $key => $label):
-            $value = $_SESSION["formData"][$key] ?? "";
+            // PERBAIKAN: Ubah "form_data" menjadi "formData"
+            $value = $_SESSION["formData"][$key] ?? ""; 
             
-          
             if ($key === "minat"):
-                $displayValue = htmlspecialchars(implode(", ", is_array($value) ? $value : []), ENT_QUOTES, "UTF-8");
+                $displayValue = is_array($value) ? implode(", ", $value) : "";
+                $displayValue = bersihkan($displayValue);
             elseif ($key === "pesan"):
-                $displayValue = nl2br(htmlspecialchars($value, ENT_QUOTES, "UTF-8"));
+                $displayValue = nl2br(bersihkan($value));
             else:
-                $displayValue = htmlspecialchars($value, ENT_QUOTES, "UTF-8");
-            endif;
+                $displayValue = bersihkan($value);
+            endif;  
         ?>
-            <p><strong><?= $label ?>:</strong> <?= $displayValue ?></p>
+            <p><strong><?= tebal(bersihkan($label)) ?>:</strong> <?= $displayValue ?></p>
         <?php endforeach; ?>
     </article>
 <?php endif; ?>
