@@ -8,5 +8,5 @@ pada pertemuan-10 saya melakukan:
 5. Mencoba membuat data tabel kontak di menu data base dan membuat PRIMARY KEY dengan AUTO_INCREMENT pada tabel kontak di phpmyadmin dan berhasil.
 6.  Menguji dan mengisi data tabel kontak di menu insert dan berfungsi.
 7.  Menguji dan mencoba memberi perintah di menu SQL dan berhasil.
-8.  Mengatur pengaturan di menu ekspor basis data dan mencoba mengeskpor file (db_pwd_2611500022) ke direktori folder P10 dan berhasi
+8.  Mengatur pengaturan di menu ekspor basis data dan mencoba mengeskpor file (db_pwd_2611500022) ke direktori folder P10 dan berhasil
 
