@@ -5,4 +5,4 @@ pada pertemuan-10 saya melakukan:
 2. Mengecek folder P10 dapat diakses melalui localhost dan berfungsi.
 3. Mencoba mendownolod phpmyadmin dan mencoba masuk ke phpmyadmin melalui browser dan berhasil.
 4. Mencocokan dan menentukan data formulir dan data pilihan minat yang ada di P10.
-5. Mencoba membuat data tabel kontak dan membuat PRIMARY KEY dengan AUTO_INCREMENT pada tabel kontak di phpmyadmin dan berhasil
+5. Mencoba membuat data tabel kontak dan membuat PRIMARY KEY dengan AUTO_INCREMENT pada tabel kontak di phpmyadmin dan berhasil.
